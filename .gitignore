@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# working directories
+/repositories/
+/workspaces/

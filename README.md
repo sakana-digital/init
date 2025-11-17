@@ -8,6 +8,7 @@ macOSの開発環境を構築するとき用のメモ
         - v25.0.0
             - npm
             - pnpm
+    - Apache Maven
     - [QMK Firmware][qmk] (optional)
     - dcraw (optional)
 
@@ -34,10 +35,33 @@ macOSの開発環境を構築するとき用のメモ
 - [Sourcetree][sourcetree] (optional)
 
 - [Visual Studio Code][vscode]
+    - Claude Code for VSCode
+    - Codex
+    - Community Server Connectors
+    - Extension Pack for Java
+    - Github Copilot (Chat)
+    - Hex Editor
+    - Japanese Language Pack for Visual Studio Code
+    - Live Server
+    - Live Share
+    - Runtime Server Protocol UI
+    - Spring Boot Extension Pack
+    - Vue (Official)
+    - XML
+    - Gemini CLI Companion
+    - Gemini Code Assist
+    - GitHub Copilot app modernization (- upgrade for Java)
+    - JSP Language Support
+    - Prettier - Code formatter
 
 - [XCode][xcode]
     - Command Line Tools for Xcode (Command Line) (ついてくる)
 
+## download するだけのやつ
+- [Apache Tomcat][apache-tomcat]
+    - 11.0.14
+
+[apache-tomcat]: https://tomcat.apache.org/
 [bun]: https://bun.com/get
 [brew]: https://brew.sh/ja/
 [claude]: https://code.claude.com/docs/ja/setup#npm

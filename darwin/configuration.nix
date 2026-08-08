@@ -58,6 +58,10 @@
 
   programs.zsh.enable = true;
 
+  # home-manager extends fpath after /etc/zshrc, so a compinit here would
+  # rebuild .zcompdump on every startup
+  programs.zsh.enableGlobalCompInit = false;
+
   programs.zsh.promptInit = ''PS1="%n@%m %1~ %# "'';
 
   homebrew = {

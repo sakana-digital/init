@@ -1,6 +1,9 @@
-# macOS
-.DS_Store
+# Nix
+result
+result-*
 
-# working directories
-/repositories/
-/workspaces/
+# direnv
+.direnv/
+
+# bootstrap.sh generated files
+machine.nix

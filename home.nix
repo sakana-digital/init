@@ -38,6 +38,7 @@ in
 
     ignores = [
       ".DS_Store"
+
       "**/.claude/settings.local.json"
     ];
 
@@ -55,6 +56,7 @@ in
     dotDir = "${config.xdg.configHome}/zsh";
 
     envExtra = ''
+      # Vite+ bin (https://viteplus.dev)
       [ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
     '';
 
@@ -64,10 +66,14 @@ in
 
     initContent = lib.mkMerge [
       (lib.mkOrder 1000 ''
-        export BUN_INSTALL="$HOME/.bun"
-        export PATH="$BUN_INSTALL/bin:$PATH"
+        # bun completions
         [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
+        # Bun
+        export BUN_INSTALL="$HOME/.bun"
+        export PATH="$BUN_INSTALL/bin:$PATH"
+
+        # Vite+ bin (https://viteplus.dev)
         [ -s "$HOME/.vite-plus/env" ] && . "$HOME/.vite-plus/env"
 
         export PATH="$HOME/.antigravity/antigravity/bin:$PATH"

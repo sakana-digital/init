@@ -75,7 +75,6 @@
 
     casks = [
       "visual-studio-code"
-      "docker-desktop"
       "github"
     ];
 

@@ -47,6 +47,8 @@ in
 
     settings = {
       merge.ff = false;
+
+      init.defaultBranch = "main";
     };
 
     # The generated config is a read-only link; identity goes to config.local

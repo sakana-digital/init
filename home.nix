@@ -61,13 +61,6 @@ in
 
     initContent = lib.mkMerge [
       (lib.mkOrder 1000 ''
-        # bun completions
-        [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-        # Bun
-        export BUN_INSTALL="$HOME/.bun"
-        export PATH="$BUN_INSTALL/bin:$PATH"
-
         export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
         export PATH="$HOME/.local/bin:$PATH"

@@ -73,9 +73,6 @@ in
         export BUN_INSTALL="$HOME/.bun"
         export PATH="$BUN_INSTALL/bin:$PATH"
 
-        # Vite+ bin (https://viteplus.dev)
-        [ -s "$HOME/.vite-plus/env" ] && . "$HOME/.vite-plus/env"
-
         export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
         export PATH="$HOME/.local/bin:$PATH"

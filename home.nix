@@ -55,11 +55,6 @@ in
 
     dotDir = "${config.xdg.configHome}/zsh";
 
-    envExtra = ''
-      # Vite+ bin (https://viteplus.dev)
-      [ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-    '';
-
     profileExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv zsh)"
     '';

@@ -19,6 +19,9 @@
       KeyRepeat = 2;
       InitialKeyRepeat = 15;
       NSAutomaticPeriodSubstitutionEnabled = false;
+      NSTableViewDefaultSizeMode = 1;
+      "com.apple.sound.beep.volume" = 0.0;
+      "com.apple.trackpad.scaling" = 1.5;
     };
 
     dock = {
@@ -26,6 +29,20 @@
       orientation = "right";
       tilesize = 25;
       show-recents = false;
+      showAppExposeGestureEnabled = true;
+      showMissionControlGestureEnabled = true;
+
+      persistent-apps = [ ];
+
+      persistent-others = [
+        {
+          folder = {
+            path = "/Users/${primaryUser}/Downloads";
+            arrangement = "date-added";
+            showas = "fan";
+          };
+        }
+      ];
     };
 
     finder = {
@@ -36,6 +53,16 @@
     trackpad = {
       Clicking = true;
       TrackpadThreeFingerDrag = true;
+
+      # Three-finger drag needs the three-finger swipes out of the way;
+      # four-finger swipes cover Mission Control / App Expose instead
+      TrackpadThreeFingerHorizSwipeGesture = 0;
+      TrackpadThreeFingerVertSwipeGesture = 0;
+    };
+
+    WindowManager = {
+      HideDesktop = true;
+      AppWindowGroupingBehavior = true;
     };
   };
 

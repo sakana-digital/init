@@ -6,8 +6,6 @@
   ...
 }:
 let
-  jdk = pkgs.temurin-bin-21;
-
   # Real file, not /nix/store, so edits show up in git diff
   link =
     path:
@@ -18,23 +16,19 @@ in
 
   home.packages = with pkgs; [
     nixfmt
-
-    fnm
-    maven
-    bun
-    jdk
-    qmk
+    devbox
 
     gh
+
     ffmpeg
     exiftool
-    libjxl
-
-    # tomcat11: nixpkgs build changes the webapps layout
   ];
 
-  home.sessionVariables = {
-    JAVA_HOME = jdk.home;
+  programs.direnv = {
+    enable = true;
+
+    # Without this, a GC wipes every project's devShell
+    nix-direnv.enable = true;
   };
 
   programs.git = {
@@ -79,8 +73,6 @@ in
         export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
         export PATH="$HOME/.local/bin:$PATH"
-
-        eval "$(fnm env)"
 
         [ -s "$ZDOTDIR/.zshrc.local" ] && . "$ZDOTDIR/.zshrc.local"
       '')

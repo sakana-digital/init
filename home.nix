@@ -29,6 +29,9 @@ in
 
     # Without this, a GC wipes every project's devShell
     nix-direnv.enable = true;
+
+    # devbox exports hundreds of vars, drowning the prompt on every cd
+    config.global.hide_env_diff = true;
   };
 
   programs.git = {

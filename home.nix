@@ -60,6 +60,8 @@ in
 
     dotDir = "${config.xdg.configHome}/zsh";
 
+    completionInit = "autoload -U compinit && compinit -u";
+
     profileExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv zsh)"
     '';

@@ -46,6 +46,7 @@
     };
 
     finder = {
+      AppleShowAllFiles = true;
       FXPreferredViewStyle = "clmv";
       NewWindowTarget = "Home";
     };
@@ -60,9 +61,18 @@
       TrackpadThreeFingerVertSwipeGesture = 0;
     };
 
+    menuExtraClock = {
+      FlashDateSeparators = true;
+      ShowAMPM = true;
+      ShowDate = false;
+      ShowDayOfWeek = true;
+      ShowSeconds = true;
+    };
+
     WindowManager = {
       HideDesktop = true;
       AppWindowGroupingBehavior = true;
+      EnableTiledWindowMargins = true;
     };
   };
 

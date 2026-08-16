@@ -64,7 +64,7 @@
     menuExtraClock = {
       FlashDateSeparators = true;
       ShowAMPM = true;
-      ShowDate = false;
+      ShowDate = 1; # 1 = always
       ShowDayOfWeek = true;
       ShowSeconds = true;
     };
@@ -111,6 +111,7 @@
     };
 
     casks = [
+      "google-chrome"
       "visual-studio-code"
       "github"
     ];

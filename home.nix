@@ -23,6 +23,9 @@ in
 
     gh
 
+    # Only so the filter.lfs commands in programs.git resolve, if a repo uses LFS
+    git-lfs
+
     ffmpeg
     exiftool
   ];
@@ -40,8 +43,6 @@ in
   programs.git = {
     enable = true;
 
-    lfs.enable = true;
-
     ignores = [
       ".DS_Store"
 
@@ -52,6 +53,16 @@ in
       merge.ff = false;
 
       init.defaultBranch = "main";
+
+      # GitHub Desktop runs `git lfs install` on launch; with anything but these
+      # exact values it tries to rewrite the read-only generated config and fails.
+      # `lfs.enable` bakes in an absolute store path, so it cannot be used here.
+      filter.lfs = {
+        clean = "git-lfs clean -- %f";
+        smudge = "git-lfs smudge -- %f";
+        process = "git-lfs filter-process";
+        required = true;
+      };
     };
 
     # The generated config is a read-only link; identity goes to config.local

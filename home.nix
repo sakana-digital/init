@@ -18,6 +18,9 @@ in
     nixfmt
     devbox
 
+    # VS Code extensions run `#!/usr/bin/env node` shims outside any devbox shell
+    nodejs
+
     gh
 
     ffmpeg

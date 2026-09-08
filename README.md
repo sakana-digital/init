@@ -4,15 +4,15 @@
 
 ```sh
 # 初回
-git clone https://github.com/sakana-digital/init.git ~/path/to/init
-cd ~/path/to/init
+git clone https://github.com/sakana-digital/init.git ~/Documents/GitHub.nosync/init
+cd ~/Documents/GitHub.nosync/init
 ./bootstrap.sh
 
 # 反映
-sudo darwin-rebuild switch --flake "path:$HOME/path/to/init#default"
+sudo darwin-rebuild switch --flake "path:$HOME/Documents/GitHub.nosync/init#default"
 
 # アップデート
-nix flake update && sudo darwin-rebuild switch --flake "path:$HOME/path/to/init#default"
+nix flake update && sudo darwin-rebuild switch --flake "path:$HOME/Documents/Github.nosync/init#default"
 ```
 
 ## 管理対象
